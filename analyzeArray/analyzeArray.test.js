@@ -20,6 +20,10 @@ test("Calculates length correctly", () => {
   expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty("length", 6);
 });
 
-test("Finds min value correctly", () => {
+test("Calculates min value correctly", () => {
   expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty("min", 1);
+});
+
+test("Calculates max value correctly", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty("max", 8);
 });

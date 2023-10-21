@@ -19,6 +19,14 @@ function getMinOfArray(array) {
   return min;
 }
 
+function getMaxOfArray(array) {
+  let max = -Infinity;
+  for (let num of array) {
+    if (num > max) max = num;
+  }
+  return max;
+}
+
 export function analyzeArray(array) {
   if (!(array instanceof Array)) throw new Error("Given value isn't an array");
   if (!doesArrayContainOnlyNumbers(array))
@@ -27,6 +35,7 @@ export function analyzeArray(array) {
   return {
     average: getAverageOfArray(array),
     min: getMinOfArray(array),
+    max: getMaxOfArray(array),
     length: array.length,
   };
 }
