@@ -31,3 +31,12 @@ test("Calculates max value correctly", () => {
 test("Rounds average to fifth place", () => {
   expect(analyzeArray([3.14, 8, 7])).toHaveProperty("average", 6.04667);
 });
+
+test("Does full analysis correctly", () => {
+  expect(analyzeArray([4, 3, 1, 8, 15, 8, -5, 7.3, 3.14])).toEqual({
+    average: 4.93778,
+    min: -5,
+    max: 15,
+    length: 9,
+  });
+});
