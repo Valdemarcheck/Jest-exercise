@@ -27,13 +27,17 @@ function getMaxOfArray(array) {
   return max;
 }
 
+function getFloatRoundedToFifthPlace(number) {
+  return Number(number.toFixed(5));
+}
+
 export function analyzeArray(array) {
   if (!(array instanceof Array)) throw new Error("Given value isn't an array");
   if (!doesArrayContainOnlyNumbers(array))
     throw new Error("An array must contain only numbers");
 
   return {
-    average: getAverageOfArray(array),
+    average: getFloatRoundedToFifthPlace(getAverageOfArray(array)),
     min: getMinOfArray(array),
     max: getMaxOfArray(array),
     length: array.length,
