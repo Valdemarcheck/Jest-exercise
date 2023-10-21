@@ -1,2 +1,3 @@
 # Jest-exercise
-Just an exercise from TOP to try out Jest
+
+This is my implementation of "Testing Practice" project from The Odin Project curriculum. It showcases my beginner knowledge of how to use Jest
