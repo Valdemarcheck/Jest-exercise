@@ -11,6 +11,14 @@ function getAverageOfArray(array) {
   return sumOfAllElements / array.length;
 }
 
+function getMinOfArray(array) {
+  let min = Infinity;
+  for (let num of array) {
+    if (num < min) min = num;
+  }
+  return min;
+}
+
 export function analyzeArray(array) {
   if (!(array instanceof Array)) throw new Error("Given value isn't an array");
   if (!doesArrayContainOnlyNumbers(array))
@@ -18,6 +26,7 @@ export function analyzeArray(array) {
 
   return {
     average: getAverageOfArray(array),
+    min: getMinOfArray(array),
     length: array.length,
   };
 }
