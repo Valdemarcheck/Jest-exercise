@@ -15,3 +15,7 @@ test("Throws an error if given array contains other values besides numbers", () 
 test("Calculates average correctly", () => {
   expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty("average", 4);
 });
+
+test("Calculates length correctly", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toHaveProperty("length", 6);
+});

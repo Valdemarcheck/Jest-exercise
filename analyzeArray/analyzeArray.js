@@ -18,5 +18,6 @@ export function analyzeArray(array) {
 
   return {
     average: getAverageOfArray(array),
+    length: array.length,
   };
 }
